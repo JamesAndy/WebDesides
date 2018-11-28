@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="Dashboard">
+  <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+  <title>JCDashio</title>
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Bootstrap core CSS -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!--external css-->
+  <link href="lib/font-awesome/css/font-awesome.css" rel="stylesheet" />
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style-responsive.css" rel="stylesheet">
+
+  <!-- =======================================================
+    Template Name: Dashio
+    Template URL: https://templatemag.com/dashio-bootstrap-admin-template/
+    Author: TemplateMag.com
+    License: https://templatemag.com/license/
+  ======================================================= -->
+</head>
+
+<body>
+  <section id="container">
+    <!-- **********************************************************************************************************************************************************
+        TOP BAR CONTENT & NOTIFICATIONS
+        *********************************************************************************************************************************************************** -->
+    <!--header start-->
+    <header class="header black-bg">
+      <div class="sidebar-toggle-box">
+        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+      </div>
+      <!--logo start-->
+      <a href="index.html" class="logo"><b>這裡是<span>LOGO</span></b></a>
+      <!--logo end-->
+      <div class="nav notify-row" id="top_menu">
+        <!--  notification start -->
+        <ul class="nav top-menu">
+          <!-- settings start -->
+          <li class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-tasks"></i>
+              <span class="badge bg-theme">4</span>
+              </a>
+            <ul class="dropdown-menu extended tasks-bar">
+              <div class="notify-arrow notify-arrow-green"></div>
+              <li>
+                <p class="green">工作進度條</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">工作項目1</div>
+                    <div class="percent">40%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                      <span class="sr-only">40% Complete (success)</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">工作項目2</div>
+                    <div class="percent">60%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                      <span class="sr-only">60% Complete (warning)</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">工作項目3</div>
+                    <div class="percent">80%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%">
+                      <span class="sr-only">80% Complete</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <div class="task-info">
+                    <div class="desc">工作項目4</div>
+                    <div class="percent">70%</div>
+                  </div>
+                  <div class="progress progress-striped">
+                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width: 70%">
+                      <span class="sr-only">70% Complete (Important)</span>
+                    </div>
+                  </div>
+                </a>
+              </li>
+              <li class="external"  onclick="changeIframeMain('pages/general.html','');">
+                <a href="#">查看全部項目</a>
+              </li>
+            </ul>
+          </li>
+          <!-- settings end -->
+          <!-- inbox dropdown start-->
+          <li id="header_inbox_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-envelope-o"></i>
+              <span class="badge bg-theme">5</span>
+              </a>
+            <ul class="dropdown-menu extended inbox">
+              <div class="notify-arrow notify-arrow-green"></div>
+              <li>
+                <p class="green">未讀訊息</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="photo"><img alt="avatar" src="img/ui-zac.jpg"></span>
+                  <span class="subject">
+                  <span class="from">使用者1</span>
+                  <span class="time">剛剛</span>
+                  </span>
+                  <span class="message">
+                  Hi mate, how is everything?
+                  </span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="photo"><img alt="avatar" src="img/ui-divya.jpg"></span>
+                  <span class="subject">
+                  <span class="from">使用者2</span>
+                  <span class="time">40分鐘前</span>
+                  </span>
+                  <span class="message">
+                  Hi, I need your help with this.
+                  </span>
+                  </a>
+              </li>
+              <li  onclick="changeIframeMain('pages/general.html','');">
+                <a href="index.html#">查看全部訊息</a>
+              </li>
+            </ul>
+          </li>
+          <!-- inbox dropdown end -->
+          <!-- notification dropdown start-->
+          <li id="header_notification_bar" class="dropdown">
+            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
+              <i class="fa fa-bell-o"></i>
+              <span class="badge bg-warning">7</span>
+              </a>
+            <ul class="dropdown-menu extended notification">
+              <div class="notify-arrow notify-arrow-yellow"></div>
+              <li>
+                <p class="yellow">提醒項目</p>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                  Server Overloaded.
+                  <span class="small italic">4分鐘前</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-warning"><i class="fa fa-bell"></i></span>
+                  Memory #2 Not Responding.
+                  <span class="small italic">30分鐘前</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                  Disk Space Reached 85%.
+                  <span class="small italic">2小時前</span>
+                  </a>
+              </li>
+              <li>
+                <a href="index.html#">
+                  <span class="label label-success"><i class="fa fa-plus"></i></span>
+                  New User Registered.
+                  <span class="small italic">2小時前</span>
+                  </a>
+              </li>
+              <li  onclick="changeIframeMain('pages/general.html','');">
+                <a href="index.html#">查看所有訊息</a>
+              </li>
+            </ul>
+          </li>
+          <!-- notification dropdown end -->
+        </ul>
+        <!--  notification end -->
+      </div>
+      <div class="top-menu">
+        <ul class="nav pull-right top-menu">
+          <li><a class="logout" href="login.html">Logout</a></li>
+        </ul>
+      </div>
+    </header>
+    <!--header end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN SIDEBAR MENU
+        *********************************************************************************************************************************************************** -->
+    <!--sidebar start-->
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu" id="nav-accordion">
+          <li class="sub-menu">
+            <a class="centered pt-0" href="javascript:;">
+            <img src="img/ui-sam.jpg" class="img-circle" width="60">
+            <h5>Sam Soffes</h5>
+            </a>
+            <ul class="sub">
+              <li onclick="changeIframeMain('pages/profile.html','個人簡介');"><a>個人簡介</a></li>
+              <li><a href="login.html">登出</a></li>
+              <li><a href="lock_screen.html">螢幕鎖定</a></li>
+              <li onclick="changeIframeMain('pages/panels.html','面板');"><a>面板</a></li>
+              <li onclick="changeIframeMain('pages/font_awesome.html','Icon元素');"><a>Icon元素</a></li>
+            </ul>
+          </li>
+          <li onclick="changeIframeMain('index.html','');" class="mt">
+            <a class="active">
+              <i class="fa fa-dashboard"></i>
+              <span>儀錶板</span>
+              </a>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-desktop"></i>
+              <span>UI元素</span>
+              </a>
+            <ul class="sub">
+              <li onclick="changeIframeMain('pages/general.html','一般');"><a>一般</a></li>
+              <li onclick="changeIframeMain('pages/buttons.html','按鈕');"><a>按鈕</a></li>
+              <li onclick="changeIframeMain('pages/panels.html','面板');"><a>面板</a></li>
+              <li onclick="changeIframeMain('pages/font_awesome.html','Icon元素');"><a>Icon元素</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-cogs"></i>
+              <span>組件</span>
+              </a>
+            <ul class="sub">
+              <li onclick="changeIframeMain('pages/grids.html','網格');"><a>網格</a></li>
+              <li onclick="changeIframeMain('pages/calendar.html','日曆');"><a>日曆</a></li>
+              <li onclick="changeIframeMain('pages/gallery.html','圖片展示');"><a>圖片展示</a></li>
+              <li onclick="changeIframeMain('pages/todo_list.html','事項');"><a>事項</a></li>
+              <li onclick="changeIframeMain('pages/inline_editor.html','Inline Editor');"><a>Inline Editor</a></li>
+              <li onclick="changeIframeMain('pages/dropzone.html','Dropzone檔案傳輸');"><a>Dropzone檔案傳輸</a></li>
+              <li onclick="changeIframeMain('pages/file_upload.html','Multiple檔案傳輸');"><a>Multiple檔案傳輸</a></li>
+              <li onclick="changeIframeMain('pages/file_JCShowFile.html','檔案預覽');"><a>檔案預覽</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-book"></i>
+              <span>範例頁面</span>
+              </a>
+            <ul class="sub">
+              <li onclick="changeIframeMain('pages/blank.html','空白頁面');"><a>空白頁面</a></li>
+              <li onclick="changeIframeMain('pages/invoice.html','發票');"><a>發票</a></li>
+              <li onclick="changeIframeMain('pages/pricing_table.html','價目表');"><a>價目表</a></li>
+              <li onclick="changeIframeMain('pages/nav_tab.html','基本頁籤');"><a>基本頁籤</a></li>
+              <li onclick="changeIframeMain('pages/faq.html','問與答');"><a>問與答</a></li>
+              <li onclick="changeIframeMain('404.html','404頁面');"><a>404頁面</a></li>
+              <li onclick="changeIframeMain('500.html','500頁面');"><a>500頁面</a></li>
+              <li onclick="changeIframeMain('pages/addTab.html','新增tab頁面');"><a>新增tab頁面</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-tasks"></i>
+              <span>表單</span>
+              </a>
+            <ul class="sub">
+              <li onclick="changeIframeMain('pages/form_component.html','基本表單');"><a>基本表單</a></li>
+              <li onclick="changeIframeMain('pages/advanced_form_components.html','Advanced Components');"><a>Advanced Components</a></li>
+              <li onclick="changeIframeMain('pages/form_validation.html','Form Validation');"><a>Form Validation</a></li>
+              <li onclick="changeIframeMain('pages/JC_form.html','JC表單元素');"><a>JC表單元素</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-th"></i>
+              <span>資料展示</span>
+              </a>
+            <ul class="sub">
+              <li onclick="changeIframeMain('pages/basic_table.html','基本資料展示');"><a>基本資料展示</a></li>
+              <li onclick="changeIframeMain('pages/responsive_table.html','DataTables資料展示');"><a>DataTables資料展示</a></li>
+            </ul>
+          </li>
+          <li onclick="changeIframeMain('pages/inbox.html','電子信箱');">
+            <a>
+              <i class="fa fa-envelope"></i>
+              <span>電子信箱 </span>
+              <span class="label label-theme pull-right mail-info">2</span>
+            </a>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class=" fa fa-bar-chart-o"></i>
+              <span>統計圖表</span>
+              </a>
+            <ul class="sub">
+              <li onclick="changeIframeMain('pages/morris.html','Morris');"><a>Morris</a></li>
+              <li onclick="changeIframeMain('pages/chartjs.html','Chartjs');"><a>Chartjs</a></li>
+              <li onclick="changeIframeMain('pages/flot_chart.html','Flot Charts');"><a>Flot Charts</a></li>
+              <li onclick="changeIframeMain('pages/xchart.html','xChart');"><a>xChart</a></li>
+            </ul>
+          </li>
+          <li class="sub-menu">
+            <a href="javascript:;">
+              <i class="fa fa-comments-o"></i>
+              <span>聊天室</span>
+              </a>
+            <ul class="sub">
+              <li onclick="changeIframeMain('pages/lobby.html','Lobby');"><a>Lobby</a></li>
+              <li onclick="changeIframeMain('pages/chat_room.html','Chat Room');"><a> Chat Room</a></li>
+            </ul>
+          </li>
+          <li onclick="changeIframeMain('pages/google_maps.html','Google Maps');">
+            <a>
+              <i class="fa fa-map-marker"></i>
+              <span>Google Maps </span>
+            </a>
+          </li>
+        </ul>
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+    <!--sidebar end-->
+    <!-- **********************************************************************************************************************************************************
+        MAIN CONTENT
+        *********************************************************************************************************************************************************** -->
+    <!--main content start-->
+    <section id="main-content">
+      <section class="wrapper site-min-height">
+        <h3 id="ifromDataTitle"><i class="fa fa-angle-right"></i> 空白頁面</h3>
+        <hr>
+        <iframe title="" id="ifromDataMain" class="page-header ifromDataMain"  frameborder="0" src="pages/blank.html" ></iframe>
+      <!-- /wrapper -->
+      </section>
+    </section>
+    <!-- /MAIN CONTENT -->
+    <!--main content end-->
+    <!--footer start-->
+    <footer class="site-footer">
+      <div class="text-center">
+        <p>
+          &copy; Copyrights <strong>Dashio</strong>. All Rights Reserved
+        </p>
+        <div class="credits">
+          <!--
+            You are NOT allowed to delete the credit link to TemplateMag with free version.
+            You can delete the credit link only if you bought the pro version.
+            Buy the pro version with working PHP/AJAX contact form: https://templatemag.com/dashio-bootstrap-admin-template/
+            Licensing information: https://templatemag.com/license/
+          -->
+          Created with Dashio template by <a href="https://templatemag.com/">TemplateMag</a>
+        </div>
+        <a href="blank.html#" class="go-top">
+          <i class="fa fa-angle-up"></i>
+          </a>
+      </div>
+    </footer>
+    <!--footer end-->
+  </section>
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/jquery-ui-1.9.2.custom.min.js"></script>
+  <script src="lib/jquery.ui.touch-punch.min.js"></script>
+  <script class="include" type="text/javascript" src="lib/jquery.dcjqaccordion.2.7.js"></script>
+  <script src="lib/jquery.scrollTo.min.js"></script>
+  <script src="lib/jquery.nicescroll.js" type="text/javascript"></script>
+  <!--common script for all pages-->
+  <script src="lib/common-scripts.js"></script>
+  <!--script for this page-->
+  <script type="text/javascript">
+    function changeIframeMain(srcValue,breadcrumbName){
+      $("#ifromDataMain").attr("src",srcValue);
+      $("#ifromDataTitle").text(breadcrumbName);
+    }
+  </script>
+  <style media="screen">
+  .ifromDataMain{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+  }
+  </style>
+</body>
+
+</html>

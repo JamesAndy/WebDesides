@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css" /><!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap-datepicker/css/datepicker.css" /><!--external css-->
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap-daterangepicker/daterangepicker.css" /><!--external css-->
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap-datetimepicker/datertimepicker.css" /><!--external css-->
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap-timepicker/compiled/timepicker.css" /><!--external css-->
+  <link rel="stylesheet" type="text/css" href="../lib/bootstrap-fileupload/bootstrap-fileupload.css" /><!--external css-->
+  <link rel="stylesheet" type="text/css" href="../lib/font-awesome/css/font-awesome.css" /><!--external css-->
+  <link rel="stylesheet" type="text/css" href="../css/style.css" /><!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="../css/style-responsive.css" /><!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="../lib/datatables/datatables.min.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+</head>
+<body>
+  <!--main content start-->
+    <div class="row mt">
+      <div class="col-lg-12">
+        <div class="col-lg-12 col-md-12 col-sm-12">
+          <div class="showback">
+            <h4><i class="fa fa-angle-right"></i> PDF預覽</h4>
+            <p><a href="http://jquery.malsup.com/media/">jQuery.media API </a> </p>
+            <div id="handout_wrap_inner"></div>
+          </div>
+
+          <div class="showback">
+            <h4><i class="fa fa-angle-right"></i> openoffice+jquery.media.js實現文檔在線預覽</h4>
+            <p><a href="https://hk.saowen.com/a/4a50cc5dcf5ba23224f4fda14963197ccb3da682d66fd43858ffa57d431136ee">文檔在線預覽 API </a> </p>
+            <div id="#"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--main content end-->
+  <!-- js placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="../lib/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="../lib/jquery/jquery.media.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="../lib/jquery.dcjqaccordion.2.7.js"></script>
+  <script type="text/javascript" src="../lib/jquery.scrollTo.min.js"></script>
+  <script type="text/javascript" src="../lib/jquery.nicescroll.js"></script>
+  <script type="text/javascript" src="../lib/jquery-ui-1.9.2.custom.min.js"></script>
+  <script type="text/javascript" src="../lib/jquery.tagsinput.js"></script><!--custom tagsinput-->
+  <script type="text/javascript" src="../lib/bootstrap-switch.js"></script><!--custom switch使用須注意-->
+  <script type="text/javascript" src="../lib/bootstrap-datepicker/js/bootstrap-datepicker.js"></script><!--custom checkbox & radio-->
+  <script type="text/javascript" src="../lib/bootstrap-daterangepicker/date.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-daterangepicker/daterangepicker.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-daterangepicker/moment.min.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-fileupload/bootstrap-fileupload.js"></script>
+  <script type="text/javascript" src="../lib/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+  <script type="text/javascript" src="../lib/advanced-form-components.js"></script>
+  <script type="text/javascript" src="../lib/form-component.js"></script>
+  <script type="text/javascript" src="../lib/datatables/datatables.min.js"></script>
+
+  <!--script for this page-->
+  <script type="text/javascript">
+
+
+    function runAction(action){
+
+    }
+
+
+    $(window).load(function(){
+      $('#handout_wrap_inner').media({
+        width: '100%',
+        height: '900px',
+        autoplay: true,
+        src:'http://storage.xuetangx.com/public_assets/xuetangx/PDF/PlayerAPI_v1.0.6.pdf',
+      });
+    });
+  </script>
+</body>
+</html>
