@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>個人儀錶板</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../../vendor/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- jQuery -->
+    <script src="../../vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../../vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../../vendor/raphael/raphael.min.js"></script>
+    <script src="../../vendor/morrisjs/morris.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../../dist/js/sb-admin-2.js"></script>
+
+    <script type="text/javascript">
+      //資訊視覺化data
+      $(function() {
+        /*資料格式
+        Morris.Area({
+          element: '對照要顯示的id',
+          data:[
+              {
+                X軸項目: '2010 Q1',//時間
+                項目1:224,
+                項目2:254
+              },
+              {
+                X軸項目: '2010 Q1',//時間
+                項目1:224,
+                項目2:254
+              }
+          ],
+          xkey: 'X軸項目',
+          ykeys: ['iphone', 'ipad', 'itouch'],//Y軸項目
+          labels: ['iPhone', 'iPad', 'iPod Touch'],//標籤項目
+          pointSize: 2,
+          hideHover: 'auto',
+          resize: true
+        });
+        */
+
+        Morris.Area({
+            element: 'morris-area-chart',
+            data: [{
+                period: '2010 Q1',
+                iphone: 2666,
+                ipad: null,
+                itouch: 2647
+            }, {
+                period: '2010 Q2',
+                iphone: 2778,
+                ipad: 2294,
+                itouch: 2441
+            }, {
+                period: '2010 Q3',
+                iphone: 4912,
+                ipad: 1969,
+                itouch: 2501
+            }, {
+                period: '2010 Q4',
+                iphone: 3767,
+                ipad: 3597,
+                itouch: 5689
+            }, {
+                period: '2011 Q1',
+                iphone: 6810,
+                ipad: 1914,
+                itouch: 2293
+            }, {
+                period: '2011 Q2',
+                iphone: 5670,
+                ipad: 4293,
+                itouch: 1881
+            }, {
+                period: '2011 Q3',
+                iphone: 4820,
+                ipad: 3795,
+                itouch: 1588
+            }, {
+                period: '2011 Q4',
+                iphone: 15073,
+                ipad: 5967,
+                itouch: 5175
+            }, {
+                period: '2012 Q1',
+                iphone: 10687,
+                ipad: 4460,
+                itouch: 2028
+            }, {
+                period: '2012 Q2',
+                iphone: 8432,
+                ipad: 5713,
+                itouch: 1791
+            }],
+            xkey: 'period',
+            ykeys: ['iphone', 'ipad', 'itouch'],
+            labels: ['iPhone', 'iPad', 'iPod Touch'],
+            pointSize: 2,
+            hideHover: 'auto',
+            resize: true
+        });
+
+        Morris.Donut({
+            element: 'morris-donut-chart',
+            data: [{
+                label: "Download Sales",
+                value: 12
+            }, {
+                label: "In-Store Sales",
+                value: 30
+            }, {
+                label: "Mail-Order Sales",
+                value: 20
+            }],
+            resize: true
+        });
+        Morris.Donut({
+            element: 'morris-donut-chart2',
+            data: [{
+                label: "成人",
+                value: 12
+            }, {
+                label: "青年",
+                value: 30
+            }, {
+                label: "老人",
+                value: 20
+            }],
+            resize: true
+        });
+
+        Morris.Bar({
+        element: 'morris-bar-chart',
+        data: [{
+            y: '2006',
+            a: 100,
+            b: 90
+        }, {
+            y: '2007',
+            a: 75,
+            b: 65
+        }, {
+            y: '2008',
+            a: 50,
+            b: 40
+        }, {
+            y: '2009',
+            a: 75,
+            b: 65
+        }, {
+            y: '2010',
+            a: 50,
+            b: 40
+        }, {
+            y: '2011',
+            a: 75,
+            b: 65
+        }, {
+            y: '2012',
+            a: 100,
+            b: 90
+        }],
+        xkey: 'y',
+        ykeys: ['a', 'b'],
+        labels: ['Series A', 'Series B'],
+        hideHover: 'auto',
+        resize: true
+    });
+
+    });
+
+    </script>
+
+</head>
+
+<body>
+
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">儀錶板</h1>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-comments fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">26</div>
+                                        <div>New Comments!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-tasks fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">12</div>
+                                        <div>New Tasks!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-yellow">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-shopping-cart fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">124</div>
+                                        <div>New Orders!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="panel panel-red">
+                            <div class="panel-heading">
+                                <div class="row">
+                                    <div class="col-xs-3">
+                                        <i class="fa fa-support fa-5x"></i>
+                                    </div>
+                                    <div class="col-xs-9 text-right">
+                                        <div class="huge">13</div>
+                                        <div>Support Tickets!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#">
+                                <div class="panel-footer">
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- /.col-lg-12 -->
+                </div>
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <i class="fa fa-clock-o fa-fw"></i> Responsive Timeline
+                      </div>
+                      <div class="panel-body">
+                        <ul class="timeline">
+                          <li><!--Timeline子元素-->
+                              <div class="timeline-badge"><i class="fa fa-check"></i></div><!--線上的圖片-->
+                              <div class="timeline-panel"><!--TimelineBox-->
+                                  <div class="timeline-heading">
+                                      <h4 class="timeline-title">我是TimeLine標題(預設左邊)</h4><!--Timeline標題-->
+                                      <p>
+                                        <small class="text-muted"><i class="fa fa-clock-o"></i><!--Timeline副標題-->
+                                          我是TimeLine副標題
+                                        </small>
+                                      </p>
+                                  </div>
+                                  <div class="timeline-body"><!--Timeline內容-->
+                                      <p>TimeLine內容。TimeLine內容。TimeLine內容。TimeLine內容。TimeLine內容。</p>
+                                  </div>
+                              </div><!--/TimelineBox-->
+                          </li>
+
+                          <li class="timeline-inverted"><!--Timeline子元素-->
+                              <div class="timeline-badge"><i class="fa fa-check"></i></div><!--線上的圖片-->
+                              <div class="timeline-panel"><!--TimelineBox-->
+                                  <div class="timeline-heading">
+                                      <h4 class="timeline-title">我是TimeLine標題(右邊)</h4><!--Timeline標題-->
+                                      <p>
+                                        <small class="text-muted"><i class="fa fa-clock-o"></i><!--Timeline副標題-->
+                                          我是TimeLine副標題
+                                        </small>
+                                      </p>
+                                  </div>
+                                  <div class="timeline-body"><!--Timeline內容-->
+                                      <p>TimeLine內容。TimeLine內容。TimeLine內容。TimeLine內容。TimeLine內容。</p>
+                                  </div>
+                              </div><!--/TimelineBox-->
+                          </li>
+
+                          <li class="timeline-inverted"><!--Timeline子元素-->
+
+                              <div class="timeline-panel"><!--TimelineBox-->
+                                  <div class="timeline-heading">
+                                      <h4 class="timeline-title">我是TimeLine標題(無圖片)</h4><!--Timeline標題-->
+                                      <p>
+                                        <small class="text-muted"><i class="fa fa-clock-o"></i><!--Timeline副標題-->
+                                          我是TimeLine副標題
+                                        </small>
+                                      </p>
+                                  </div>
+                                  <div class="timeline-body"><!--Timeline內容-->
+                                      <p>TimeLine內容。TimeLine內容。TimeLine內容。TimeLine內容。TimeLine內容。</p>
+                                  </div>
+                              </div><!--/TimelineBox-->
+                          </li>
+
+                          <li><!--Timeline子元素-->
+                              <div class="timeline-badge"><i class="fa fa-check"></i></div><!--線上的圖片-->
+                              <div class="timeline-panel"><!--TimelineBox-->
+                                  <div class="timeline-heading">
+                                      <h4 class="timeline-title">我是TimeLine標題(預設左邊)</h4><!--Timeline標題-->
+                                      <p>
+                                        <small class="text-muted"><i class="fa fa-clock-o"></i><!--Timeline副標題-->
+                                          我是TimeLine副標題
+                                        </small>
+                                      </p>
+                                  </div>
+                                  <div class="timeline-body"><!--Timeline內容-->
+                                      <p>TimeLine內容。TimeLine內容。TimeLine內容。TimeLine內容。TimeLine內容。</p>
+                                  </div>
+                                  <hr>
+                                  <div class="btn-group">
+                                      <button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
+                                          <i class="fa fa-gear"></i> <span class="caret"></span>
+                                      </button>
+                                      <ul class="dropdown-menu" role="menu">
+                                          <li><a href="#">Action</a>
+                                          </li>
+                                          <li><a href="#">Another action</a>
+                                          </li>
+                                          <li><a href="#">Something else here</a>
+                                          </li>
+                                          <li class="divider"></li>
+                                          <li><a href="#">Separated link</a>
+                                          </li>
+                                      </ul>
+                                  </div>
+                              </div><!--/TimelineBox-->
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <i class="fa fa-bell fa-fw"></i> 提醒(代辦事項)
+                      </div>
+                      <div class="panel-body">
+                        <div class="list-group"><!--訊息群組-->
+                          <a href="#" class="list-group-item"><!--訊息單位-->
+                              <i class="fa fa-comment fa-fw"></i> 3則新訊息
+                              <span class="pull-right text-muted small"><em>4 minutes ago</em>
+                              </span>
+                          </a>
+                        </div>
+                        <a href="#" class="btn btn-default btn-block">檢視所有訊息</a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div class="chat-panel panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-comments fa-fw"></i> 聊天室窗
+                            <div class="btn-group pull-right">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-chevron-down"></i>
+                                </button>
+                                <ul class="dropdown-menu slidedown">
+                                  <li><a href="#">狀態</a></li>
+                                  <li class="divider"></li>
+                                  <li><a href="#"><i class="fa fa-check-circle fa-fw"></i>上線</a></li>
+                                  <li><a href="#"><i class="fa fa-times fa-fw"></i>離線</a></li>
+                                  <li><a href="#"><i class="fa fa-clock-o fa-fw"></i>閒置</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="panel-body">
+                          <ul class="chat"><!--訊息內容-->
+                            <li class="left clearfix"><!--最小訊息單位-->
+                                <span class="chat-img pull-left"><img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" /></span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                      <strong class="primary-font">Jack Sparrow</strong><!--使用者姓名-->
+                                      <small class="pull-right text-muted"><i class="fa fa-clock-o fa-fw"></i> 12 mins ago</small><!--送出訊息時間-->
+                                    </div>
+                                    <p>
+                                        訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="left clearfix"><!--最小訊息單位-->
+                                <span class="chat-img pull-left"><img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" /></span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                      <strong class="primary-font">Jack Sparrow</strong><!--使用者姓名-->
+                                      <small class="pull-right text-muted"><i class="fa fa-clock-o fa-fw"></i> 12 mins ago</small><!--送出訊息時間-->
+                                    </div>
+                                    <p>
+                                        訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="left clearfix"><!--最小訊息單位-->
+                                <span class="chat-img pull-left"><img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar" class="img-circle" /></span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                      <strong class="primary-font">Jack Sparrow</strong><!--使用者姓名-->
+                                      <small class="pull-right text-muted"><i class="fa fa-clock-o fa-fw"></i> 12 mins ago</small><!--送出訊息時間-->
+                                    </div>
+                                    <p>
+                                        訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="right clearfix"><!--使用者訊息  -->
+                                <span class="chat-img pull-right"><img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar" class="img-circle" /></span>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <small class=" text-muted"><i class="fa fa-clock-o fa-fw"></i> 15 mins ago</small>
+                                        <strong class="pull-right primary-font">Bhaumik Patel</strong>
+                                    </div>
+                                    <p>
+                                        訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。訊息內容。
+                                    </p>
+                                </div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="panel-footer">
+                            <div class="input-group">
+                                <input id="btn-input" type="text" class="form-control input-sm" placeholder="Type your message here..." />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-warning btn-sm" id="btn-chat">
+                                        Send
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">視覺化資訊儀錶板</h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-bar-chart-o fa-fw"></i> 折線圖
+                              <div class="pull-right">
+                                  <div class="btn-group">
+                                      <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                          動作
+                                          <span class="caret"></span>
+                                      </button>
+                                      <ul class="dropdown-menu pull-right" role="menu">
+                                          <li><a href="#">動作</a></li>
+                                          <li class="divider"></li>
+                                          <li><a href="#">動作1</a></li>
+                                          <li><a href="#">動作2</a></li>
+                                      </ul>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                              <div id="morris-area-chart"></div><!--顯示Morris.Donut-->
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                      <div class="panel panel-default">
+                          <div class="panel-heading">
+                              <i class="fa fa-bar-chart-o fa-fw"></i> 樹狀圖
+                          </div>
+                          <!-- /.panel-heading -->
+                          <div class="panel-body">
+                            <div class="row">
+                              <div class="col-lg-4">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered table-hover table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>時間</th>
+                                                <th>項目</th>
+                                                <th>細項</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>2018.1.1 12:08</td>
+                                                <td>張三</td>
+                                                <td>無聊</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>2018.1.1 12:08</td>
+                                                <td>李四</td>
+                                                <td>無聊</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                              </div>
+                              <div class="col-lg-8">
+                                  <div id="morris-bar-chart"></div><!--顯示Morris.Donut-->
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.panel-body -->
+                      </div>
+                    </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i> 圓餅圖
+                        </div>
+                        <div class="panel-body">
+                            <div id="morris-donut-chart"></div>
+                            <a href="#" class="btn btn-default btn-block">顯示詳細資訊</a>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                  </div>
+                  <div class="col-lg-8">
+                    <div class="panel panel-default">
+                      <div class="panel-heading">
+                          <i class="fa fa-bar-chart-o fa-fw"></i> 圓餅圖 + 表格
+                      </div>
+                      <div class="panel-body">
+                        <div class="row">
+                          <div class="col-lg-8">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>老人</th>
+                                            <th>青年</th>
+                                            <th>成人</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                          </div>
+                          <div class="col-lg-4">
+                            <div id="morris-donut-chart2"></div>
+                            <a href="#" class="btn btn-default btn-block">顯示詳細資訊</a>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+</body>
+
+</html>
