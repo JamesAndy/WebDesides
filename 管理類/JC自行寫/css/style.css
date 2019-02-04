@@ -1,0 +1,111 @@
+
+
+/* Extra small devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap */
+html {
+  scroll-behavior: smooth;
+}
+.jc-div-nav{
+  margin-top: 56px;
+  display: none;
+}
+
+.jc-nav{
+
+}
+.jc-nav a {
+    text-align: left;
+}
+.jc-nav-2{
+  background-color: #1222;
+}
+.jc-nav-item{
+  list-style: none;
+}
+.jc-nav-link{
+  display: block;
+  text-decoration: none;
+  padding-left: 15px;
+}
+.jc-nav-link:hover{
+  text-decoration: none;
+  width: 100%;
+  background-color: #1122;
+}
+
+
+
+body {
+  margin-bottom: 120px;
+}
+main{
+  margin-top: 56px;
+}
+footer {
+  bottom: 0;
+  left: 0;
+  height: 70px;
+  background-color: white;
+  width: 100%;
+}
+
+
+
+#myUL li a:hover:not(.jc-nav-link) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  body{
+
+  }
+  head{
+    height: 10%;
+  }
+  aside{
+    display: block;
+  }
+  footer {
+    height: 5%;
+    position: fixed;
+    transition-duration: .5s;
+  }
+  footer:hover{
+    height: 20%;
+    transition-duration: .5s;
+  }
+  main{
+    display: block;
+    margin-left: 200px;
+    height: 85%;
+    overflow-y: : scroll;
+  }
+  .jc-div-nav{
+    position: absolute;
+    display: block;
+    width: 200px;
+    left: 0px;
+    max-height: 85%;
+    overflow-y: scroll;
+  }
+  main .ifromDataMain{
+    margin: 0;
+    width: 1600px;
+    height: 100vh;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

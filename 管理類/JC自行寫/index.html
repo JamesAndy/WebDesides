@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>JCTEST</title>
+    <link rel="stylesheet" href="lib/bootstrap-4.1.3-dist/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.1.3-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="lib/bootstrap-4.1.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="lib/jquery/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+
+    </style>
+    <style media="screen">
+
+    </style>
+  </head>
+  <body class="">
+    <header class="container-fluid fixed-top">
+      <nav class="navbar navbar-expand-lg bg-light navbar-light row">
+        <h4 class="d-inline  mr-3">系統名稱</h4>
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="搜尋網站" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">
+                  <i class="fa fa-search"></i>
+                  搜尋
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </nav>
+    </header>
+    <aside>
+      <div class="jc-div-nav">
+        <form class="jc-nav-search-from form-inline my-2 my-lg-0">
+          <div class="input-group">
+            <input type="text" class="form-control" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        <div class="">
+          <ul id="myUL" class="nav nav-fill flex-column jc-nav">
+            <li class="nav-item"><a class="nav-link" href="#" onclick="addTab('儀錶板','pages/blank.html');">儀錶板</a></li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="collapse" href="#multiCollapsePageElement" aria-expanded="false" aria-controls="multiCollapsePageElement">頁面元素</a>
+              <ul class="collapse multi-collapse jc-nav-2" id="multiCollapsePageElement">
+                <li class="jc-nav-item"><a class="jc-nav-link" href="#">input</a></li>
+                <li class="jc-nav-item"><a class="jc-nav-link" href="#">button</a></li>
+                <li class="jc-nav-item"><a class="jc-nav-link" href="#">table</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><a class="nav-link" href="#">關於我</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <main class="float-left">
+        <div id="tabs">
+          <ul>
+            <li><a href="#tabs-1">首頁</a></li>
+          </ul>
+          <div id="tabs-1">
+            <p>Proin elit arcu, rutrum commodo, vehicula tempus, commodo a, risus. Curabitur nec arcu. Donec sollicitudin mi sit amet mauris. Nam elementum quam ullamcorper ante. Etiam aliquet massa et lorem. Mauris dapibus lacus auctor risus. Aenean tempor ullamcorper leo. Vivamus sed magna quis ligula eleifend adipiscing. Duis orci. Aliquam sodales tortor vitae ipsum. Aliquam nulla. Duis aliquam molestie erat. Ut et mauris vel pede varius sollicitudin. Sed ut dolor nec orci tincidunt interdum. Phasellus ipsum. Nunc tristique tempus lectus.</p>
+          </div>
+        </div>
+      </main>
+    </aside>
+    <footer class="">
+      網站資訊網站資訊網站資訊網站資訊網站資訊網站資訊網站資訊網站資訊網站資訊網站資訊網站資訊
+    </footer>
+
+
+    <script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/jquery/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="lib/jquery/jquery.media.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-4.1.3-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="lib/bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      function myFunction() {
+        var value = $(this).val().toLowerCase();
+        $("#myUL *").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      }
+      $(document).ready(function(){
+  $("#myInput22").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#myList22 li").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+    </script>
+    <div class="container">
+      <h2>Filterable List</h2>
+      <p>Type something in the input field to search the list for specific items:</p>
+      <input class="form-control" id="myInput22" type="text" placeholder="Search..">
+      <br>
+      <ul class="list-group" id="myList22">
+        <li class="list-group-item align-items-center justify-content-between">
+          <span class="badge badge-primary badge-pill">14</span>
+          儀錶板
+        </li>
+        <li class="list-group-item align-items-center justify-content-between">
+          <span class="badge badge-primary badge-pill">14</span>
+          <a  data-toggle="collapse" href="#multiCollapseExample1" aria-expanded="false" aria-controls="multiCollapseExample1">階層一</a>
+          <ul class=" list-group collapse multi-collapse" id="multiCollapseExample1">
+            <li class="list-group-item">
+              階層二
+            </li>
+          </ul>
+        </li>
+        <li class="list-group-item align-items-center justify-content-between">
+          <span class="badge badge-primary badge-pill">14</span>
+          Third item
+        </li>
+        <li class="list-group-item align-items-center justify-content-between">
+          <span class="badge badge-primary badge-pill">14</span>
+          Fourth
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>
